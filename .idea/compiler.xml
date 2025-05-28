@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hungrycoders_java" />
+        <module name="java_concepts" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

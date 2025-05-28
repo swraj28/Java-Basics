@@ -2,22 +2,39 @@ package Multithreading.BasicThreadOperations;
 
 // ThreadExample.java
 
-// Define a class that extends the Thread class
-class MyThread extends Thread {
-    // Override the run method to define the task
+class MyThread1 extends Thread {
+
+    @Override
     public void run() {
-        // Print a message indicating the thread is running
-        System.out.println("Thread is running");
+
+        for(int i=0;i<5;i++) {
+            System.out.println("Thread is running with id " + Thread.currentThread().getId());
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                // Handle the exception
+                System.out.println("Thread interrupted: " + e.getMessage());
+            }
+        }
     }
 }
 
 // Main class to test MyThread
 public class ThreadExample {
     public static void main(String[] args) {
-        // Create an instance of MyThread
-        MyThread t1 = new MyThread();
 
-        // Start the thread
-        t1.start(); // Output: Thread is running
+        // Create another instance of MyThread1
+        MyThread1 t2 = new MyThread1();
+        MyThread1 t3 = new MyThread1();
+
+        t2.start(); // Output: Thread is running with id 1
+        t3.start(); // Output: Thread is running with id 2
+
+        // Using Lambda Expression
+        Thread t4 = new Thread(() -> {
+            System.out.println("Thread is running");
+        });
+
+        t4.start();
     }
 }

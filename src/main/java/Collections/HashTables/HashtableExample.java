@@ -1,10 +1,7 @@
 package Collections.HashTables;
 
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Iterator;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class HashtableExample {
     public static void main(String[] args) {
@@ -45,6 +42,18 @@ public class HashtableExample {
             Entry<String, Integer> entry = iterator.next();
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
+
+        Set<Long> recoViewIds = new HashSet<>();
+        recoViewIds.add(null);
+
+        if(recoViewIds==null || recoViewIds.isEmpty()){
+            System.out.println("Set is empty");
+        }
+
+        Integer x = 127;
+        Integer y = 127;
+
+        System.out.println(x ==y);
 //        Output:
 //        Key: One, Value: 1
 //        Key: Four, Value: 4

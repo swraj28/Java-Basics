@@ -18,6 +18,7 @@ public class FinalKeywordExample {
 }
 
 // Uncommenting below code will cause a compile-time error
+
 /*
 class SubClass extends FinalKeywordExample {
     // Cannot override final method
@@ -27,3 +28,5 @@ class SubClass extends FinalKeywordExample {
     }
 }
 */
+
+
